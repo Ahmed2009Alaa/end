@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="إعلان صيدلية د. عبدالرحمن أسامة">
+    <title>صيدلية د. عبدالرحمن أسامة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: radial-gradient(circle at top, #00e1ff, #004cff);
+            padding: 20px;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 80px rgba(0, 229, 255, 0.4);
+            padding: 30px;
+            gap: 20px;
+            backdrop-filter: blur(15px);
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, #00e1ff, #ff00d4, #00e1ff);
+            animation: rotateBG 8s linear infinite;
+            z-index: -1;
+        }
+
+        .left,
+        .right {
+            flex: 1 1 100%;
+            text-align: center;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @media(min-width: 768px) {
+
+            .left,
+            .right {
+                flex: 1 1 45%;
+                text-align: right;
+            }
+        }
+
+        .title {
+            font-size: clamp(28px, 5vw, 50px);
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .subtitle {
+            font-size: clamp(18px, 3vw, 28px);
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #ffeaea;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        .phone {
+            font-size: clamp(20px, 4vw, 34px);
+            font-weight: 800;
+        }
+
+        .cta {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff512f, #dd2476, #ff512f);
+            color: #fff;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 10px;
+            box-shadow: 0 8px 25px rgba(221, 36, 118, 0.6);
+            background-size: 200% auto;
+            animation: gradientMove 3s linear infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 35px rgba(221, 36, 118, 0.8);
+        }
+
+        .logo {
+            width: clamp(200px, 40vw, 300px);
+            height: clamp(200px, 40vw, 300px);
+            border-radius: 50%;
+            background: radial-gradient(circle, #00e1ff, #0072ff);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 229, 255, 0.6);
+            text-align: center;
+            animation: popIn 1s ease forwards, float 4s ease-in-out infinite;
+        }
+
+        .logo-icon {
+            font-size: clamp(50px, 8vw, 90px);
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .logo-text {
+            font-size: clamp(18px, 5vw, 28px);
+            font-weight: 900;
+            color: #fff;
+        }
+
+        .logo-sub {
+            font-size: clamp(12px, 3vw, 16px);
+            color: #ffeaea;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.05)
+            }
+        }
+
+        @keyframes rotateBG {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes gradientMove {
+            to {
+                background-position: 200% center
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-10px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="left">
+            <div class="title">صيدلية د. عبدالرحمن أسامة</div>
+            <div class="subtitle">💖 نخدمكم بقلوبنا قبل أدويتنا 💊</div>
+            <div class="contact">
+                <div class="phone">📞 01024067648</div>
+                <div>لطلب واستفسار — صيدلية د. عبدالرحمن أسامة</div>
+            </div>
+            <a href="tel:01024067648" class="cta">اتصل الآن</a>
+            <p><b>تم تصميم الاعلان بواسطة أحمد علاء</b></p>
+        </div>
+        <div class="right">
+            <div class="logo">
+                <div class="logo-icon">💊</div>
+                <div class="logo-text">Dr. ABDURHMAN<br>OSAMA</div>
+                <div class="logo-sub">PHARMACY</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>تم تصميم هذا الاعلان بواسطة أحمد علاء عمر</p>
+    </footer>
+</body>
+
+</html>
